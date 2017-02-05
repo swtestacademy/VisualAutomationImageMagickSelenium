@@ -206,7 +206,7 @@ public class KariyerVisualTest {
         IMOperation cmpOp = new IMOperation();
 
         //Add option -fuzz to the ImageMagick commandline
-        cmpOp.fuzz(0.8);
+        cmpOp.fuzz(10.0);
         cmpOp.metric("AE");
 
         // Add the expected image
@@ -280,23 +280,21 @@ public class KariyerVisualTest {
 
         wait.until(jsLoad);
         wait.until(jQueryLoad);
-        Thread.sleep(1000);
+        Thread.sleep(200);
 
         //Close Banner
         try {
             List<WebElement> banner = driver.findElements(By.cssSelector("body > div.kobi-head-banner > div > a"));
             if(!banner.isEmpty()) {
                 banner.get(0).click();
+                //Wait for 2 second for closing banner
+                wait.until(jsLoad);
+                wait.until(jQueryLoad);
+                Thread.sleep(2000);
             }
         } catch (Exception e) {
             System.out.println("Banner Closed Before!");
         }
-
-        //Wait for 2 second for closing banner
-        wait.until(jsLoad);
-        wait.until(jQueryLoad);
-        Thread.sleep(3000);
-
 
         //Declare UZMAN photo section
         WebElement uzmanPhotoSection = driver.findElement(By.cssSelector(".item.uzman>a"));
@@ -305,10 +303,13 @@ public class KariyerVisualTest {
         js.executeScript("document.getElementsByClassName('count')[0].style.display='none';");
         wait.until(jsLoad);
         wait.until(jQueryLoad);
-        Thread.sleep(1000);
+        Thread.sleep(200);
 
         //Move To Operation
         Actions actions = new Actions(driver);
+        wait.until(jsLoad);
+        wait.until(jQueryLoad);
+        Thread.sleep(200);
         actions.moveToElement(uzmanPhotoSection).build().perform();
 
         //Wait for 2 second for violet color animation
