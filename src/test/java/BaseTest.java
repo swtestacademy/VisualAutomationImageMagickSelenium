@@ -134,9 +134,9 @@ public class BaseTest {
         File testDirectory = new File(path);
         if (!testDirectory.exists()) {
             if (testDirectory.mkdir()) {
-                System.out.println("Directory is created!");
+                System.out.println("Directory: " + path + " is created!" );
             } else {
-                System.out.println("Failed to create directory!");
+                System.out.println("Failed to create directory: " + path);
             }
         } else {
             System.out.println("Directory already exists: " + path);
