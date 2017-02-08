@@ -65,7 +65,7 @@ public class BaseTest {
     //Setup Driver
     @BeforeClass
     public void setupTestClass() throws IOException {
-        //Declare Firefox driver
+        //Declare Chrome driver
         driver = new ChromeDriver();
 
         //Maximize the browser
