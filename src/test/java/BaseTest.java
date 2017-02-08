@@ -221,7 +221,7 @@ public class BaseTest {
     public void compareImagesWithImageMagick (String expected, String actual, String difference) throws Exception {
         // This class implements the processing of os-commands using a ProcessBuilder.
         // This is the core class of the im4java-library where all the magic takes place.
-        ProcessStarter.setGlobalSearchPath("C:\\Program Files\\ImageMagick-7.0.4-Q16");
+        //ProcessStarter.setGlobalSearchPath("C:\\Program Files\\ImageMagick-7.0.4-Q16");
 
         // This instance wraps the compare command
         CompareCmd compare = new CompareCmd();
