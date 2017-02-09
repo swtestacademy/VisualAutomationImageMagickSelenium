@@ -2,7 +2,6 @@ import com.google.common.io.Files;
 import org.apache.commons.io.FileUtils;
 import org.im4java.core.CompareCmd;
 import org.im4java.core.IMOperation;
-import org.im4java.process.ProcessStarter;
 import org.im4java.process.StandardStream;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -197,8 +196,8 @@ public class BaseTest {
     }
 
     //Write
-    public void writeScreenshotToFolder (Screenshot screenshot, File imageFile) throws IOException {
-        ImageIO.write(screenshot.getImage(), "PNG", imageFile);
+    public void writeScreenshotToFolder (Screenshot screenshot) throws IOException {
+        ImageIO.write(screenshot.getImage(), "PNG", actualImageFile);
     }
 
     //Screenshot paths

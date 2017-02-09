@@ -33,7 +33,7 @@ public class KariyerVisualTest extends BaseTest {
         Screenshot uzmanScreenShot = takeScreenshot(uzmanPhotoSection);
 
         //Write actual screenshot to the actual screenshot path
-        writeScreenshotToFolder(uzmanScreenShot, actualImageFile);
+        writeScreenshotToFolder(uzmanScreenShot);
 
         //Do image comparison
         doComparison(uzmanScreenShot);
