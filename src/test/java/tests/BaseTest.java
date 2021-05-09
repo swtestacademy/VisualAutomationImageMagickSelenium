@@ -17,6 +17,7 @@ public class BaseTest {
     @BeforeClass
     public void setupTestClass() {
         driver = new ChromeDriver(chromeOptionsUtil.getChromeOptions());
+        driver.manage().window().maximize();
         steps = new Steps(driver);
         steps.preTestSetup();
     }
