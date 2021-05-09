@@ -25,7 +25,7 @@ public class ImageMagickUtil {
 
         //Add option -fuzz to the ImageMagick commandline
         //With Fuzz we can ignore small changes
-        cmpOp.fuzz(5.0);
+        cmpOp.fuzz(8.0);
 
         //The special "-metric" setting of 'AE' (short for "Absolute Error" count), will report (to standard error),
         //a count of the actual number of pixels that were masked, at the current fuzz factor.
